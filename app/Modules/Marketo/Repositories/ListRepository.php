@@ -64,7 +64,6 @@ class ListRepository extends BaseRepository
     public function get($records, $batchSize, $page = 0)
     {
         $key = "SeedlingMarketoLists-{$records}-{$batchSize}-{$page}";
-        $predis = new Client();
 
         if (($rate = $this->rateLimit()) !== null) {
             return $rate;
