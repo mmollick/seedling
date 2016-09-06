@@ -1,10 +1,12 @@
-<?php namespace App\Modules\Sample\Controllers;
+<?php
+
+namespace App\Modules\Sample\Controllers;
 
 use App\Controllers\Controller;
 use App\Modules\Sample\Repositories\LeadsRepository;
 
-class LeadsController extends Controller {
-
+class LeadsController extends Controller
+{
     public function get($id)
     {
         $time = microtime(true);
@@ -27,5 +29,4 @@ class LeadsController extends Controller {
             json_encode($arr)
         );
     }
-
 }
