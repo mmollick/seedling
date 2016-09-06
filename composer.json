@@ -1,5 +1,6 @@
 {
-    "name": "mmollick/seeder",
+    "name": "mmollick/seedling",
+    "license": "MIT",
     "authors": [
         {
             "name": "Michael Mollick",
