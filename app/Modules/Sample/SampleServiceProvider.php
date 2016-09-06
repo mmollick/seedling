@@ -1,9 +1,11 @@
-<?php namespace App\Modules\Sample;
+<?php
+
+namespace App\Modules\Sample;
 
 use Slim\Slim;
 
-class SampleServiceProvider {
-
+class SampleServiceProvider
+{
     /**
      * @param $app
      */
@@ -12,5 +14,4 @@ class SampleServiceProvider {
         $app->get('/sample/lists/', 'App\Modules\Sample\Controllers\ListController:get');
         $app->get('/sample/lists/:id/leads', 'App\Modules\Sample\Controllers\LeadsController:get');
     }
-
 }

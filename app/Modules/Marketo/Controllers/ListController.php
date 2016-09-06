@@ -1,12 +1,14 @@
-<?php namespace App\Modules\Marketo\Controllers;
+<?php
+
+namespace App\Modules\Marketo\Controllers;
 
 use App\Controllers\Controller;
 use App\Modules\Marketo\Repositories\ListRepository;
 use Faker\Factory;
 use Predis\Client;
 
-class ListController extends Controller {
-
+class ListController extends Controller
+{
     public function get()
     {
         $time = microtime(true);
@@ -29,5 +31,4 @@ class ListController extends Controller {
             json_encode($arr)
         );
     }
-
 }

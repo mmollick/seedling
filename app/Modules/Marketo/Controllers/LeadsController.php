@@ -1,13 +1,14 @@
-<?php namespace App\Modules\Marketo\Controllers;
+<?php
+
+namespace App\Modules\Marketo\Controllers;
 
 use App\Controllers\Controller;
 use App\Modules\Marketo\Repositories\LeadsRepository;
 use Faker\Factory;
-use Faker\Generator;
 use Predis\Client;
 
-class LeadsController extends Controller {
-
+class LeadsController extends Controller
+{
     public function get($id)
     {
         $time = microtime(true);
@@ -30,5 +31,4 @@ class LeadsController extends Controller {
             json_encode($arr)
         );
     }
-
 }

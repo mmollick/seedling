@@ -1,10 +1,12 @@
-<?php namespace App\Modules\Sample\Controllers;
+<?php
+
+namespace App\Modules\Sample\Controllers;
 
 use App\Controllers\Controller;
 use App\Modules\Sample\Repositories\ListRepository;
 
-class ListController extends Controller {
-
+class ListController extends Controller
+{
     public function get()
     {
         $time = microtime(true);
@@ -27,5 +29,4 @@ class ListController extends Controller {
             json_encode($arr)
         );
     }
-
 }

@@ -1,10 +1,11 @@
-<?php namespace App\Controllers;
+<?php
+
+namespace App\Controllers;
 
 use Slim\Slim;
 
 class Controller
 {
-
     /**
      * @var null|Slim
      */
@@ -16,7 +17,7 @@ class Controller
     }
 
     /**
-     * Generic entry
+     * Generic entry.
      */
     public function getHello()
     {
@@ -24,17 +25,16 @@ class Controller
     }
 
     /**
-     * Generic health test
+     * Generic health test.
      */
     public function getHealth()
     {
         $this->app->response->setBody(
             json_encode([
                 'application' => $this->app->getName(),
-                'version' => $this->app->config('version'),
-                'time' => Carbon::now()->toDateTimeString()
+                'version'     => $this->app->config('version'),
+                'time'        => Carbon::now()->toDateTimeString(),
             ])
         );
     }
-
 }
